@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://desamalomi-k.github.io/m-page-leyu-com-cn/sitemap.xml
