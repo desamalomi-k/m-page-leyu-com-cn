@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星空体育 | 在竞技与节奏之间</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #f8f6f0;
+            color: #2e2b27;
+            line-height: 1.7;
+            padding: 2rem 1.2rem;
+        }
+        .page {
+            max-width: 840px;
+            margin: 0 auto;
+            background-color: #fdfcfa;
+            padding: 2.4rem 2rem;
+            border-radius: 28px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.04), 0 2px 6px rgba(0,0,0,0.02);
+        }
+        @media (max-width: 600px) {
+            body { padding: 1rem 0.6rem; }
+            .page { padding: 1.6rem 1.2rem; border-radius: 20px; }
+        }
+
+        /* hero */
+        .hero {
+            margin-bottom: 2.8rem;
+            border-bottom: 1px solid #e7e2d9;
+            padding-bottom: 1.8rem;
+        }
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 360;
+            letter-spacing: 0.02em;
+            color: #1f1c18;
+            margin-bottom: 0.6rem;
+            line-height: 1.2;
+        }
+        .hero .sub {
+            font-size: 1.05rem;
+            color: #6b645b;
+            max-width: 70%;
+        }
+        @media (max-width: 500px) {
+            .hero h1 { font-size: 1.9rem; }
+            .hero .sub { max-width: 100%; }
+        }
+
+        /* section */
+        section {
+            margin-bottom: 2.6rem;
+        }
+        h2 {
+            font-size: 1.35rem;
+            font-weight: 450;
+            color: #2b2722;
+            margin-bottom: 0.9rem;
+            border-left: 4px solid #b7aa96;
+            padding-left: 1rem;
+        }
+        p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+        .highlight-box {
+            background: #f2efe8;
+            padding: 1.4rem 1.6rem;
+            border-radius: 18px;
+            margin: 1.6rem 0;
+            border-left: 4px solid #9b8c7a;
+            font-style: normal;
+        }
+        .highlight-box p {
+            margin-bottom: 0.4rem;
+        }
+        .highlight-box .ref {
+            font-size: 0.9rem;
+            color: #6f675d;
+            margin-top: 0.6rem;
+        }
+
+        /* 特点网格 */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+            margin: 1.4rem 0 1.8rem;
+        }
+        .feature-item {
+            background: #f5f2eb;
+            padding: 1.2rem 1rem;
+            border-radius: 16px;
+            border: 1px solid #e5ded3;
+        }
+        .feature-item strong {
+            display: block;
+            font-weight: 550;
+            color: #2f2a24;
+            margin-bottom: 0.3rem;
+            font-size: 1rem;
+        }
+        .feature-item span {
+            font-size: 0.93rem;
+            color: #4f4941;
+        }
+        @media (max-width: 540px) {
+            .feature-grid { grid-template-columns: 1fr; }
+        }
+
+        /* FAQ 摘要 */
+        .faq-list {
+            margin: 1.2rem 0 2rem;
+        }
+        .faq-item {
+            padding: 0.9rem 0;
+            border-bottom: 1px dashed #ddd8ce;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-q {
+            font-weight: 500;
+            color: #36312b;
+            margin-bottom: 0.25rem;
+        }
+        .faq-a {
+            color: #5b544b;
+            font-size: 0.95rem;
+        }
+
+        /* 底部链接 */
+        .footer-links {
+            margin-top: 2rem;
+            padding-top: 1.6rem;
+            border-top: 1px solid #e7e2d9;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 0.8rem;
+        }
+        .footer-links a {
+            color: #5a5045;
+            text-decoration: none;
+            border-bottom: 1px solid #c8bfb2;
+            transition: border-color 0.2s;
+        }
+        .footer-links a:hover {
+            border-bottom-color: #2b2722;
+        }
+        .footer-note {
+            font-size: 0.9rem;
+            color: #7d756b;
+        }
+        .inline-link {
+            color: #4f463b;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-color: #cbc1b2;
+            transition: color 0.2s;
+        }
+        .inline-link:hover {
+            color: #1f1b16;
+            text-decoration-color: #1f1b16;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- hero -->
+    <div class="hero">
+        <h1>星空体育</h1>
+        <div class="sub">在竞技与节奏之间，保持专注与从容</div>
+    </div>
+
+    <!-- 引出主题 + 叙述感 -->
+    <section>
+        <p>许多时候，我们寻找的并非单纯的结果，而是一种可以沉浸其中、同时保持清醒的节奏。体育也好，日常中的其他事也好，真正让人感到踏实的，往往是那些透明、稳定、可预期的进程。<a href="https://zhweb--xingkongsports.com" class="inline-link">星空体育</a>所承载的，正是这样一份朴素的理念——将竞技的张力与平实的秩序融为一体。它不是喧嚣的，也不试图制造焦虑，而是提供一片可以静心感受、理性参与的场域。</p>
+    </section>
+
+    <!-- 引用块 / 提示框 -->
+    <div class="highlight-box">
+        <p>“好的体验，往往发生在节奏对的时候。不是更快，而是更稳。”</p>
+        <div class="ref">—— 来自一位长期参与者的日常观察</div>
+    </div>
+
+    <!-- 优势区 / 特点 -->
+    <section>
+        <h2>在细节中建立信任</h2>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <strong>节奏节制</strong>
+                <span>不追求不间断的刺激，而是让人可以按照自己的步调参与。</span>
+            </div>
+            <div class="feature-item">
+                <strong>信息简洁</strong>
+                <span>减少冗余干扰，用清晰的结构呈现核心内容。</span>
+            </div>
+            <div class="feature-item">
+                <strong>环境稳定</strong>
+                <span>长期维护的基础架构，避免不必要的波动与意外中断。</span>
+            </div>
+            <div class="feature-item">
+                <strong>社区氛围</strong>
+                <span>鼓励理性交流，不渲染对立，回归体育本身的趣味。</span>
+            </div>
+        </div>
+        <p>这些特点并非一蹴而就，而是在日常运行中逐渐积累起来的习惯。比起功能堆叠，更在意的是使用时的自然感——当你打开页面，不会感到被迫做出选择，也不会被密集的信息推着走。一切都有条不紊，就像一场节奏合适的比赛。</p>
+    </section>
+
+    <!-- 说明区 / 场景 -->
+    <section>
+        <h2>适合怎样的时刻</h2>
+        <p>无论你是在午休间隙翻看最新动态，还是在晚间安静地回顾一场赛事，或只是随意浏览一些体育相关的讨论，一个不嘈杂的环境往往更能让你保持专注。<a href="https://zhweb--xingkongsports.com" class="inline-link">星空体育</a>在设计之初就希望成为这样一个去处：既不会冷清到让人失去兴趣，也不会热闹到让人分心。它更像一个宽敞的看台，你可以随时落座，也可以随时离场，不必有负担。</p>
+        <p>体育本身包含很多维度：技术、策略、偶然性、人的意志。而一个好的平台，应该让这些维度自然呈现，而不是把它们压缩成单一的胜负数字。正是这种对多元视角的容纳，让长时间的参与变得可能。</p>
+    </section>
+
+    <!-- FAQ 摘要 (真实克制) -->
+    <section>
+        <h2>一些常见的问题</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-q">星空体育的内容更新频率如何？</div>
+                <div class="faq-a">日常保持稳定更新，重点赛事前后会适当增加内容密度，但不会过度推送。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">是否需要注册才能浏览？</div>
+                <div class="faq-a">部分基础信息无需注册即可查看，特定互动功能可能需要简单的账号创建。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">平台更偏向哪些体育项目？</div>
+                <div class="faq-a">覆盖多个主流项目，同时关注一些非顶级联赛和小众赛事，视角较为均衡。</div>
+            </div>
+        </div>
+        <p style="font-size:0.95rem; color:#6b645b;">如果你有其他疑问，也可以在页面底部的相关链接中寻找更详细的信息。</p>
+    </section>
+
+    <!-- 底部链接 + 品牌名自然出现 -->
+    <div class="footer-links">
+        <div>
+            <a href="https://zhweb--xingkongsports.com">星空体育</a>
+            <span class="footer-note"> · 保持节奏</span>
+        </div>
+        <div class="footer-note">
+            —— 不追求速度，追求持续
+        </div>
+    </div>
+
+    <!-- 轻微叙事收尾 (不额外加section) -->
+    <p style="margin-top:1.8rem; font-size:0.92rem; color:#7d756b; text-align:right; border-top:1px solid #ede8df; padding-top:1.2rem;">
+        一个安静的看台，一场不赶时间的比赛。
+    </p>
+
+</div>
+</body>
+</html>
