@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>蓝鲸体育 — 专注体育赛事与社区交流</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    }
+    body {
+      background: #f7fafc;
+      color: #1e293b;
+      line-height: 1.6;
+      padding: 0 1rem;
+    }
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 2rem 0 3rem;
+    }
+    /* hero */
+    .hero {
+      text-align: center;
+      padding: 3.5rem 1rem 2.5rem;
+      background: linear-gradient(145deg, #eef7f3 0%, #d4eae3 100%);
+      border-radius: 2.5rem 2.5rem 3rem 3rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 6px 18px rgba(0, 40, 30, 0.06);
+    }
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #0c2e2a;
+      margin-bottom: 0.75rem;
+    }
+    .hero h1 i {
+      color: #1f7a6b;
+      font-style: normal;
+    }
+    .hero p {
+      max-width: 640px;
+      margin: 0 auto 1.2rem;
+      font-size: 1.125rem;
+      color: #2b4d47;
+    }
+    .hero .highlight {
+      background: rgba(31, 122, 107, 0.1);
+      padding: 0.15rem 0.6rem;
+      border-radius: 2rem;
+      font-weight: 500;
+      color: #115c50;
+    }
+    .hero .btn-group {
+      margin-top: 1.8rem;
+    }
+    .hero .btn-outline {
+      display: inline-block;
+      padding: 0.65rem 2rem;
+      border: 1.5px solid #1f7a6b;
+      color: #1f7a6b;
+      background: transparent;
+      border-radius: 40px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .hero .btn-outline:hover {
+      background: #1f7a6b;
+      color: #fff;
+    }
+    /* 网格卡片 — 优势区 */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin: 2.5rem 0 3rem;
+    }
+    @media (min-width: 640px) {
+      .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 900px) {
+      .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 1.8rem;
+      padding: 1.8rem 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 30, 20, 0.04);
+      transition: transform 0.15s, box-shadow 0.15s;
+      border: 1px solid #e2edeb;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 24px rgba(27, 94, 80, 0.08);
+    }
+    .card .icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #1f7a6b;
+    }
+    .card h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: #0b2f2a;
+    }
+    .card p {
+      font-size: 0.95rem;
+      color: #3f5c56;
+    }
+    /* 说明区 */
+    .intro-block {
+      background: #ffffff;
+      border-radius: 2.2rem;
+      padding: 2rem 2rem 2.2rem;
+      margin: 2.8rem 0 2.8rem;
+      border: 1px solid #d9e9e3;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .intro-block h2 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: #0b2f2a;
+      margin-bottom: 1rem;
+      border-left: 6px solid #1f7a6b;
+      padding-left: 1rem;
+    }
+    .intro-block p {
+      margin-bottom: 1rem;
+      color: #2f4b45;
+    }
+    .intro-block p:last-child {
+      margin-bottom: 0;
+    }
+    .intro-block a {
+      color: #1f7a6b;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-weight: 500;
+    }
+    .intro-block a:hover {
+      color: #0c4f41;
+    }
+    /* FAQ 摘要 */
+    .faq-summary {
+      background: #eef7f3;
+      border-radius: 2.2rem;
+      padding: 2rem 2rem 2.2rem;
+      margin: 2rem 0 2.5rem;
+    }
+    .faq-summary h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #0b2f2a;
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .faq-item {
+      background: white;
+      border-radius: 1.4rem;
+      padding: 1rem 1.4rem;
+      margin-bottom: 0.9rem;
+      border-left: 4px solid #1f7a6b;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.02);
+    }
+    .faq-item strong {
+      display: block;
+      font-weight: 600;
+      color: #0b2f2a;
+      margin-bottom: 0.2rem;
+    }
+    .faq-item p {
+      font-size: 0.95rem;
+      color: #3d5b54;
+      margin: 0;
+    }
+    .faq-more {
+      margin-top: 1.2rem;
+      font-size: 0.95rem;
+      color: #1f7a6b;
+      font-weight: 500;
+      text-align: right;
+    }
+    /* 底部链接 */
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.8rem;
+      padding: 2.2rem 0 1.5rem;
+      border-top: 1px solid #d4e2dc;
+      margin-top: 1rem;
+      font-size: 0.95rem;
+    }
+    .footer-links a {
+      color: #1f6b5c;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s;
+      border-bottom: 1px solid transparent;
+    }
+    .footer-links a:hover {
+      color: #0a3e34;
+      border-bottom-color: #1f7a6b;
+    }
+    .footer-note {
+      text-align: center;
+      color: #5d7a72;
+      font-size: 0.85rem;
+      padding: 1.5rem 0 0.5rem;
+    }
+    .inline-link {
+      color: #1f7a6b;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-weight: 500;
+    }
+    .inline-link:hover {
+      color: #0a4a3d;
+    }
+    hr {
+      border: none;
+      border-top: 2px dashed #c4dbd3;
+      margin: 0.5rem 0 1.8rem;
+      opacity: 0.5;
+    }
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .intro-block, .faq-summary {
+        padding: 1.5rem;
+      }
+      .card {
+        padding: 1.5rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- hero 区 -->
+  <section class="hero">
+    <h1>⚡ 蓝鲸<span>体育</span></h1>
+    <p>从赛事动态到社群交流，<span class="highlight">蓝鲸体育</span> 为你呈现真实、鲜活、有温度的体育内容。不浮夸，不跟风，只做值得信赖的体育信息平台。</p>
+    <div class="btn-group">
+      <a class="btn-outline" href="https://root-lanjingsports.com">蓝鲸体育</a>
+    </div>
+  </section>
+
+  <!-- 优势区：网格卡片 -->
+  <div class="grid-3">
+    <div class="card">
+      <div class="icon">📰</div>
+      <h3>真实赛事信息</h3>
+      <p>覆盖足球、篮球、网球等多个项目，资讯源自多渠道核实，尽力避免传闻与误导。每天更新比赛结果、赛程与看点。</p>
+    </div>
+    <div class="card">
+      <div class="icon">🧑‍🤝‍🧑</div>
+      <h3>开放讨论氛围</h3>
+      <p>不论资深球迷还是偶尔看赛，都能在蓝鲸找到同好。社区鼓励理性讨论，不拉踩、不引战，营造友好交流圈。</p>
+    </div>
+    <div class="card">
+      <div class="icon">📊</div>
+      <h3>数据简洁直观</h3>
+      <p>核心数据用卡片和列表呈现，减少复杂表格。移动端优先设计，等车、午休时也能快速浏览关键比分与排名。</p>
+    </div>
+  </div>
+
+  <!-- 站点介绍 + 可信说明  (说明区) -->
+  <section class="intro-block">
+    <h2>关于蓝鲸体育 · 一点说明</h2>
+    <p><strong>蓝鲸体育</strong> 不是一家追逐流量的新闻站，而是一个希望让体育回归内容本身的站点。我们相信，获取赛事信息不应该被弹窗、广告和夸张标题打断。因此从版式到内容筛选，都尽量保持干净、直接。</p>
+    <p>所有比赛数据均参考公开来源与官方统计，并标注参考时间。如果发现误差，也欢迎通过站点反馈渠道提醒我们修正。我们的目标是成为一个可靠的参考起点，无论是想了解今晚的欧冠对阵，还是回顾一周 NBA 战况，<a href="https://root-lanjingsports.com">蓝鲸体育</a> 都能给你清晰、有条理的呈现。</p>
+    <p>另外，蓝鲸体育不接入任何博彩类推荐或“预测大神”内容。体育的魅力在于不确定性，而不是把每一场胜负变成投注对象。我们希望保持这份纯粹。</p>
+    <hr>
+    <p style="font-style: italic; color: #42685f;">— 始于对体育的喜欢，保持对信息的敬畏。</p>
+  </section>
+
+  <!-- FAQ 摘要 -->
+  <section class="faq-summary">
+    <h2>❓ 常见疑问 · 摘要</h2>
+    <div class="faq-item">
+      <strong>蓝鲸体育的信息更新频率？</strong>
+      <p>主要赛事（五大联赛、NBA、CBA、网球大满贯等）通常在比赛结束后 30~60 分钟内更新比分与简讯。次级联赛和友谊赛视数据源而定，一般不超过 4 小时。</p>
+    </div>
+    <div class="faq-item">
+      <strong>需要注册才能浏览内容吗？</strong>
+      <p>所有赛程、比分、新闻内容均可免费公开浏览。只有参与社区讨论或收藏功能才需要简单注册（仅需邮箱，无需手机）。</p>
+    </div>
+    <div class="faq-item">
+      <strong>如何分辨哪些内容是官方发布？</strong>
+      <p>每篇文章或数据块底部会标注信息来源（如“数据源自联赛官网”或“综合多家媒体报道”）。编辑部原创内容会带有“蓝鲸编辑”标识，方便区分。</p>
+    </div>
+    <div class="faq-more">
+      <a href="https://root-lanjingsports.com" style="color: #1f7a6b; text-decoration: underline; text-underline-offset: 3px;">蓝鲸体育</a>
+    </div>
+  </section>
+
+  <!-- 底部链接 -->
+  <footer class="footer-links">
+    <a href="https://root-lanjingsports.com">蓝鲸体育</a>
+    <a href="#">赛程速览</a>
+    <a href="#">热门社区</a>
+    <a href="#">关于我们</a>
+    <a href="#">隐私原则</a>
+  </footer>
+  <div class="footer-note">
+    © 蓝鲸体育 · 内容仅供参考，不构成任何投资或博彩建议。
+  </div>
+
+</div>
+</body>
+</html>
